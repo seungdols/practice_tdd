@@ -1,5 +1,6 @@
 package com.seungdols.tdd.ex1;
 
+import com.seungdols.tdd.ex.Dollar;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,4 +1,4 @@
-package com.seungdols.tdd.ex1;
+package com.seungdols.tdd.ex;
 
 /**
  * @PACKAGE com.seungdols.tdd.ex1
