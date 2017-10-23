@@ -1,6 +1,7 @@
 package com.seungdols.tdd.ex1;
 
 import com.seungdols.tdd.ex.Dollar;
+import com.seungdols.tdd.ex.Franc;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
@@ -35,6 +36,13 @@ public class TestExample {
 		Dollar five = new Dollar(5);
 		assertEquals(new Dollar(10), five.times(2));
 		assertEquals(new Dollar(15), five.times(3));
+	}
+
+	@Test
+	public void testMultiplication_Franc_5장_테스트코드() {
+		Franc five = new Franc(5);
+		assertEquals(new Franc(10), five.times(2));
+		assertEquals(new Franc(15), five.times(3));
 	}
 
 	@Test
