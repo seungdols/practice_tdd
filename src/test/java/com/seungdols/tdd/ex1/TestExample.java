@@ -18,16 +18,16 @@ public class TestExample {
 	public void testMultiplication_1장_테스트코드() {
 		Dollar five = new Dollar(5);
 		five.times(2);
-		assertEquals(10, five.amount);
+		assertEquals(10, five.getAmount());
 	}
 
 	@Test
 	public void testMultiplication_2장_테스트코드() {
 		Dollar five = new Dollar(5);
 		Dollar product = five.times(2);
-		assertEquals(10, product.amount);
+		assertEquals(10, product.getAmount());
 		product = five.times(3);
-		assertEquals(15, product.amount);
+		assertEquals(15, product.getAmount());
 	}
 
 	@Test
