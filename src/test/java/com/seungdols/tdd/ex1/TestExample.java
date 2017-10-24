@@ -19,7 +19,7 @@ public class TestExample {
 	public void testMultiplication_1장_테스트코드() {
 		Dollar five = new Dollar(5);
 		five.times(2);
-		assertEquals(10, five.getAmount());
+		assertEquals(5, five.getAmount());
 	}
 
 	@Test
