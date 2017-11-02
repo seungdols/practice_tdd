@@ -1,7 +1,5 @@
-package com.seungdols.tdd.ex1;
+package com.seungdols.tdd.ex;
 
-import com.seungdols.tdd.ex.Dollar;
-import com.seungdols.tdd.ex.Franc;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
