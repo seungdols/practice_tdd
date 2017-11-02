@@ -45,9 +45,9 @@ public class TestExample {
 
 	@Test
 	public void testMultiplication_Money_8장_테스트코드() {
-		Dollar five = Money.dollar(5);
-		assertEquals(new Dollar(10), five.times(2));
-		assertEquals(new Dollar(15), five.times(3));
+		Money five = Money.dollar(5);
+		assertEquals(Money.dollar(10), five.times(2));
+		assertEquals( Money.dollar(15), five.times(3));
 	}
 
 	@Test
