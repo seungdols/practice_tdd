@@ -1,5 +1,7 @@
 package com.seungdols.tdd.ex;
 
+import com.sun.org.apache.xml.internal.utils.QName;
+
 /**
  * @PACKAGE com.seungdols.tdd.ex
  * @AUTHOR seungdols
@@ -21,5 +23,9 @@ public abstract class Money {
 	public boolean equals(Object object) {
 		Money money = (Money) object;
 		return amount == money.amount && getClass().equals(money.getClass());
+	}
+
+	public static Franc franc(int amount) {
+		return new Franc(amount);
 	}
 }
