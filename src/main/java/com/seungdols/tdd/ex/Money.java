@@ -1,33 +1,40 @@
 package com.seungdols.tdd.ex;
 
-import com.sun.org.apache.xml.internal.utils.QName;
-
 /**
  * @PACKAGE com.seungdols.tdd.ex
  * @AUTHOR seungdols
  * @DATE 2017. 10. 24.
  */
 public abstract class Money {
-	protected int amount;
 
-	public int getAmount() {
-		return amount;
-	}
+    protected int amount;
+    protected String currency;
 
-	abstract Money times(int multiplier);
+    public Money(int amount, String currency) {
+        this.amount = amount;
+        this.currency = currency;
+    }
 
-	public static Dollar dollar(int amount) {
-		return new Dollar(amount);
-	}
+    public int getAmount() {
+        return amount;
+    }
 
-	public boolean equals(Object object) {
-		Money money = (Money) object;
-		return amount == money.amount && getClass().equals(money.getClass());
-	}
+    abstract Money times(int multiplier);
 
-	public static Franc franc(int amount) {
-		return new Franc(amount);
-	}
+    public static Dollar dollar(int amount) {
+        return new Dollar(amount, "USD");
+    }
 
-    public abstract String currency();
+    public boolean equals(Object object) {
+        Money money = (Money) object;
+        return amount == money.amount && getClass().equals(money.getClass());
+    }
+
+    public static Franc franc(int amount) {
+        return new Franc(amount, "CHF");
+    }
+
+    public String currency() {
+        return currency;
+    }
 }
