@@ -19,8 +19,8 @@ public class Money {
         return amount;
     }
 
-    public static Dollar dollar(int amount) {
-        return new Dollar(amount, "USD");
+    public static Money dollar(int amount) {
+        return new Money(amount, "USD");
     }
 
     public boolean equals(Object object) {
@@ -28,8 +28,8 @@ public class Money {
         return amount == money.amount && currency().equals(money.currency());
     }
 
-    public static Franc franc(int amount) {
-        return new Franc(amount, "CHF");
+    public static Money franc(int amount) {
+        return new Money(amount, "CHF");
     }
 
     public String currency() {
