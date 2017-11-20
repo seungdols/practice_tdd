@@ -61,6 +61,11 @@ public class TestExample {
 		assertFalse(Money.franc(6).equals(Money.franc(5)));
 	}
 
+	@Test
+	public void testCurrency() throws Exception {
+		assertEquals("USD", Money.dollar(1).currency());
+		assertEquals("CHF", Money.franc(1).currency());
+	}
 
 
 }

@@ -28,4 +28,6 @@ public abstract class Money {
 	public static Franc franc(int amount) {
 		return new Franc(amount);
 	}
+
+    public abstract String currency();
 }
