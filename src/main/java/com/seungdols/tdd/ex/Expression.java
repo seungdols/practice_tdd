@@ -7,6 +7,6 @@ package com.seungdols.tdd.ex;
  */
 public interface Expression {
 
-    Money reduce(String to);
+    Money reduce(Bank bank, String to);
 
 }

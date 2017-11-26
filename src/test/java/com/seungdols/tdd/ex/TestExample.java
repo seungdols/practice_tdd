@@ -137,6 +137,26 @@ public class TestExample {
 
     }
 
+    @Test
+    public void testReduceMoneyDifferentCurrency() throws Exception {
+        // given
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        // when
+        Money result = bank.reduce(Money.franc(2), "USD");
+        // then
+        assertEquals(Money.dollar(1), result);
+    }
+
+    @Test
+    public void testIdentityRate() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertEquals(1, new Bank().rate("USD", "USD"));
+    }
 
 
 }
