@@ -5,7 +5,7 @@ package com.seungdols.tdd.ex;
  * @AUTHOR seungdols
  * @DATE 2017. 11. 26.
  */
-public class Sum implements Expression{
+public class Sum implements Expression {
 
     public Sum(Money augend, Money addend) {
         this.augend = augend;
@@ -16,7 +16,7 @@ public class Sum implements Expression{
     Money addend;
 
     public Money reduce(Bank bank, String to) {
-        int amount = augend.amount + addend.amount;
+        int amount = augend.reduce(bank, to).amount + addend.reduce(bank, to).amount;
         return new Money(amount, to);
     }
 }
