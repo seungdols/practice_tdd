@@ -124,7 +124,19 @@ public class TestExample {
         Money result = bank.reduce(sum, "USD");
         // then
         assertEquals(Money.dollar(7), result);
+    }
+
+    @Test
+    public void testReduceMoney() throws Exception {
+        // given
+        Bank bank = new Bank();
+        // when
+        Money result = bank.reduce(Money.dollar(1), "USD");
+        // then
+        assertEquals(Money.dollar(1), result);
 
     }
+
+
 
 }
