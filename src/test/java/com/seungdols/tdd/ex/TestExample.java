@@ -161,8 +161,8 @@ public class TestExample {
     @Test
     public void testMixedAddition() throws Exception {
         // given
-        Money fiveBucks = Money.dollar(5);
-        Money tenFrancs = Money.franc(10);
+        Expression fiveBucks = Money.dollar(5);
+        Expression tenFrancs = Money.franc(10);
         Bank bank = new Bank();
         // when
         bank.addRate("CHF", "USD", 2);
