@@ -103,4 +103,28 @@ public class TestExample {
 
     }
 
+    @Test
+    public void testReplusReturnSum() throws Exception {
+        // given
+        Money five = Money.dollar(5);
+        Expression result = five.plus(five);
+        // when
+        Sum sum = (Sum) result;
+        // then
+        assertEquals(five, sum.augend);
+        assertEquals(five, sum.addend);
+    }
+
+    @Test
+    public void testReduceSum() throws Exception {
+        // given
+        Expression sum = new Sum(Money.dollar(3), Money.dollar(4));
+        Bank bank = new Bank();
+        // when
+        Money result = bank.reduce(sum, "USD");
+        // then
+        assertEquals(Money.dollar(7), result);
+
+    }
+
 }
