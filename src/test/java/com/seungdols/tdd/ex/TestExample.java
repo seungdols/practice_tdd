@@ -171,4 +171,31 @@ public class TestExample {
         assertEquals(Money.dollar(10), result);
     }
 
+    @Test
+    public void testSumPlusMoney() throws Exception {
+        // given
+        Expression fiveBucks = Money.dollar(5);
+        Expression tenFrancs = Money.franc(10);
+        Bank bank = new Bank();
+        // when
+        bank.addRate("CHF", "USD", 2);
+        Expression sum = new Sum(fiveBucks, tenFrancs).plus(fiveBucks);
+        Money result = bank.reduce(sum, "USD");
+        // then
+        assertEquals(Money.dollar(15), result);
+    }
+
+    @Test
+    public void testSumTimes() throws Exception {
+        // given
+        Expression fiveBucks = Money.dollar(5);
+        Expression tenFrancs = Money.franc(10);
+        Bank bank = new Bank();
+        // when
+        bank.addRate("CHF", "USD", 2);
+        Expression sum = new Sum(fiveBucks, tenFrancs).times(2);
+        Money result = bank.reduce(sum, "USD");
+        // then
+        assertEquals(Money.dollar(20), result);
+    }
 }
