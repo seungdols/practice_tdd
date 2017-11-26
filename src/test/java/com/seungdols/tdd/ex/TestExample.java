@@ -92,4 +92,15 @@ public class TestExample {
 
     }
 
+    @Test
+    public void testSimpleAddion() throws Exception {
+
+        // given
+        Money sum = Money.dollar(5).plus(Money.dollar(5));
+        // when
+
+        // then
+        assertEquals(Money.dollar(10), sum);
+    }
+
 }

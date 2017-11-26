@@ -39,4 +39,9 @@ public class Money {
     Money times(int multiplier) {
         return new Money(amount * multiplier, currency);
     }
+
+
+    public Money plus(Money addend) {
+        return new Money(amount + addend.amount, currency);
+    }
 }
