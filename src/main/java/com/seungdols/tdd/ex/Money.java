@@ -5,7 +5,7 @@ package com.seungdols.tdd.ex;
  * @AUTHOR seungdols
  * @DATE 2017. 10. 24.
  */
-public class Money {
+public class Money implements Expression{
 
     protected int amount;
     protected String currency;
@@ -41,7 +41,7 @@ public class Money {
     }
 
 
-    public Money plus(Money addend) {
+    public Expression plus(Money addend) {
         return new Money(amount + addend.amount, currency);
     }
 }
