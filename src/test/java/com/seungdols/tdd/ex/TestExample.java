@@ -198,4 +198,15 @@ public class TestExample {
         // then
         assertEquals(Money.dollar(20), result);
     }
+
+    @Test
+    public void testPlusSameCurrencyReturnsMoney() throws Exception {
+        // given
+        Expression sum = Money.dollar(1).plus(Money.dollar(1));
+
+        // when
+
+        // then
+        assertTrue(sum instanceof Money);
+    }
 }
